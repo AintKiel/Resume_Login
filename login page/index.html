@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Left panel -->
+    <div class="left-panel">
+      <h2>Create your <br>Account</h2>
+      <p>Share your resume <br>and Get projects!</p>
+    </div>
+
+    <!-- Right panel -->
+    <div class="right-panel">
+      <h2>Sign Up</h2>
+      <form action="signup.php" method="POST">
+        <input type="text" name="firstname" placeholder="First name" required>
+        <input type="text" name="lastname" placeholder="Last name" required>
+        <input type="email" name="email" placeholder="Email address" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <label class="terms">
+            <input type="checkbox" required> Accept Terms & Conditions
+        </label>
+
+        <button type="submit" class="btn-primary">Join us →</button>
+      </form>
+
+      <!-- 👉 Added here -->
+      <p class="form-toggle">
+        Already have an account? <a href="login.html">Sign In</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
