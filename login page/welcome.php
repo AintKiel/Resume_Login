@@ -7,7 +7,6 @@ if (!isset($_SESSION['user'])) {
 
 include 'data.php'; 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,17 +16,10 @@ include 'data.php';
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <!-- 🔹 Logout button -->
-    <div style="text-align: right; padding: 10px;">
-    <a href="logout.php" class="logout-btn">
-        <i class="fa-solid fa-right-from-bracket"></i> Logout
-    </a>
-    </div>
-
 
   <div class="container">
 
-    <!-- About Section -->
+    <!-- 🔹 About Section -->
     <section class="about">
       <div class="about-text">
         <h2>About me</h2>
@@ -45,20 +37,23 @@ include 'data.php';
       </div>
     </section>
 
-    <!-- Details Section -->
+    <!-- 🔹 Details Section -->
     <section class="details">
-      <div class="left">
 
+      <!-- Left Column -->
+      <div class="left">
         <div class="block">
           <h3>Education</h3>
           <?php foreach ($education as $edu): ?>
-            <p><strong><?php echo $edu["degree"]; ?></strong><br>
-               <?php echo $edu["school"]; ?> | <?php echo $edu["years"]; ?></p>
+            <p>
+              <strong><?php echo $edu["degree"]; ?></strong><br>
+              <?php echo $edu["school"]; ?> | <?php echo $edu["years"]; ?>
+            </p>
           <?php endforeach; ?>
         </div>
 
         <div class="block">
-          <h3>Technical skill</h3>
+          <h3>Technical Skills</h3>
           <div class="tech-icons">
             <img src="icons/figma.png" alt="Figma">
             <img src="icons/photoshop.jpg" alt="Photoshop">
@@ -69,26 +64,25 @@ include 'data.php';
         </div>
 
         <div class="block">
-          <h3>Interest</h3>
+          <h3>Interests</h3>
           <p><?php echo implode(" | ", $interests); ?></p>
         </div>
-
       </div>
 
+      <!-- Right Column -->
       <div class="right">
-
         <div class="block">
-          <h3>Soft skill</h3>
+          <h3>Soft Skills</h3>
           <p><?php echo implode(" | ", $soft_skills); ?></p>
         </div>
 
         <div class="block">
-          <h3>Skill set</h3>
+          <h3>Skill Set</h3>
           <p><?php echo implode(" | ", $skill_set); ?></p>
         </div>
 
         <div class="block">
-          <h3>Language</h3>
+          <h3>Languages</h3>
           <p><?php echo implode(" | ", $languages); ?></p>
         </div>
 
@@ -103,10 +97,15 @@ include 'data.php';
             </div>
           <?php endforeach; ?>
         </div>
-
       </div>
-    </section>
 
+    </section>
   </div>
+  <!-- 🔹 Logout Button -->
+  <div style="text-align: right; padding: 10px;">
+    <a href="logout.php" class="logout-btn">
+        <i class="fa-solid fa-right-from-bracket"></i> Logout
+    </a>
+    </div>
 </body>
 </html>
